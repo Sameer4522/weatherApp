@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const WeatherCard = ({ tempInfo }) => {
   const {
@@ -20,11 +20,36 @@ const WeatherCard = ({ tempInfo }) => {
 
   let time = `${date.getHours()}:${date.getMinutes()}`;
 
+  const [weatherState, setWeatheState] = React.useState("");
+
+  useEffect(() => {
+    if (weathermood) {
+      switch (weathermood) {
+        case "Clouds":
+          setWeatheState("wi-day-cloudy");
+          break;
+        case "Haze":
+          setWeatheState("wi-fog");
+          break;
+        case "Clear":
+          setWeatheState("wi-day-sunny");
+          break;
+        case "Mist":
+          setWeatheState("wi-dust");
+          break;
+
+        default:
+          setWeatheState("wi-day-sunny");
+          break;
+      }
+    }
+  }, [weathermood]);
+
   return (
     <>
       <article className="widget">
         <div className="weatherIcon">
-          <i className={"wi wi-day-sunny"}></i>
+          <i className={`wi ${weatherState}`}></i>
         </div>
 
         <div className="weatherInfo">

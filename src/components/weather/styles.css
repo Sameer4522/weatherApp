@@ -67,7 +67,7 @@ body {
   display: flex;
   justify-content: space-around;
   margin-right: 20px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 .widget .weatherInfo .description {
   flex: 0 60%;
@@ -183,12 +183,3 @@ body {
   margin-top: -150px;
   margin-bottom: 50px;
 }
-
-/*Resize the wrap to see the search bar change!*/
-/* .wrap {
-  width: 30%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-} */
