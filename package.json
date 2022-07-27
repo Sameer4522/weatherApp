@@ -1,8 +1,8 @@
 {
-  "homepage": "https://Sameer4522.github.io/weatherApp ",
+  "homepage": "https://sameer4522.github.io/weatherApp/",
   "name": "weather-app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
